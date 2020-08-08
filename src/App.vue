@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div style="width:50%">
+    <WeatherResponse uso='origen'/>
+    </div>
+    <div style="width:50%">
+    <WeatherResponse uso='destino'/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import WeatherResponse from './components/WeatherResponse.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  WeatherResponse
   }
 }
 </script>
