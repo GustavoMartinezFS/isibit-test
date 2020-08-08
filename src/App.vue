@@ -1,21 +1,30 @@
 <template>
   <div id="app">
-    <div style="width:50%">
-    <WeatherResponse uso='origen'/>
-    </div>
-    <div style="width:50%">
-    <WeatherResponse uso='destino'/>
-    </div>
+    <geoloc/>
+    <h1>Te vas de viaje?</h1>
+    <p>Averigua si te conviene quedarte unos dias mas o como estara el clima en tu destino</p>
+     <b-card >
+       <b-card-group deck>
+          <b-card header="Origen">   
+            <WeatherResponse />
+         </b-card>
+          <b-card header="Destino">  
+            <WeatherResponse />
+          </b-card>
+        </b-card-group>
+     </b-card>
   </div>
 </template>
 
 <script>
 import WeatherResponse from './components/WeatherResponse.vue'
+import geoloc from './components/geoloc.vue'
 
 export default {
   name: 'App',
   components: {
-  WeatherResponse
+  WeatherResponse,
+  geoloc
   }
 }
 </script>
