@@ -34,7 +34,7 @@ export default {
     methods:{
         getForecast(buscar){
             var apiKey = '4d52b5b750d5a63fb5093668768e7960';
-            axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${buscar}&appid=${apiKey}&units=metric&lang=sp`)
+            axios.get(`https://api.openweathermap.org/data/2.5/forecast?q=${buscar}&appid=${apiKey}&units=metric&lang=sp`)
             .then(res=>{
                this.list= res.data.list
                 this.city = res.data.city
@@ -66,7 +66,7 @@ export default {
                  var long = position.coords.longitude;
                _this.error=''
                 var apiKey = '4d52b5b750d5a63fb5093668768e7960';
-                axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric&lang=sp`)
+                axios.get(`https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric&lang=sp`)
                 .then(res=>{
                   _this.list= res.data.list
                     _this.city = res.data.city
