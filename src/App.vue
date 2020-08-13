@@ -1,41 +1,33 @@
 <template>
   <div id="app">
-    <geoloc/>
-    <h1>Te vas de viaje?</h1>
-    <p>Averigua si te conviene quedarte unos dias mas o como estara el clima en tu destino</p>
-     <b-card >
-       <b-card-group deck>
-          <b-card header="Origen">   
-            <WeatherResponse />
-         </b-card>
-          <b-card header="Destino">  
-            <WeatherResponse />
-          </b-card>
-        </b-card-group>
-     </b-card>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/weather">Weather App</router-link> |
+      <router-link to="/OCR">OCR App</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import WeatherResponse from './components/WeatherResponse.vue'
-import geoloc from './components/geoloc.vue'
-
-export default {
-  name: 'App',
-  components: {
-  WeatherResponse,
-  geoloc
-  }
-}
-</script>
-
-<style>
+<style lang="scss">
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+
+#nav {
+  padding: 30px;
+
+  a {
+    font-weight: bold;
+    color: #2c3e50;
+
+    &.router-link-exact-active {
+      color: #42b983;
+    }
+  }
 }
 </style>
