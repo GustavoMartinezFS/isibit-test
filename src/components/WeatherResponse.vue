@@ -46,7 +46,7 @@ export default {
                        temp_min: el.main.temp_min+'°C',
                        temp_max: el.main.temp_max+'°C',
                        pronostico: el.weather[0].description,
-                       icon: `http://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`
+                       icon: `https://openweathermap.org/img/wn/${el.weather[0].icon}@2x.png`
                        })
                });
             })
@@ -85,7 +85,7 @@ export default {
                 .catch(e => console.log(e))
               }
               function error() {
-                this.error = "Unable to retrieve your location";
+                _this.error = "Unable to retrieve your location";
               }
               this.error = "Locating…";
                   //appid=439d4b804bc8187953eb36d2a8c26a02 id de example 
