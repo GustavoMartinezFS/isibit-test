@@ -5,7 +5,7 @@
      <b-button @click="getUbi" class="ml-2" v-if="ubi">Mi ubicacion</b-button>
      <p>{{error}}</p>  
       <h5 class="mt-5">{{city.name}}</h5>
-    <b-table striped hover :items="items" :fields="fields" >
+    <b-table striped hover :items="items" :fields="fields" class="m-0">
          <template v-slot:cell(icon)='data'>
        <b-img :src='`${data.value}`'></b-img> 
       </template>
